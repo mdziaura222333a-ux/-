@@ -7,4 +7,23 @@
 body{display:flex;justify-content:center;align-items:center;height:100vh;margin:0;background:#111;color:white;font-family:sans-serif}
 #lock{background:#222;padding:40px;border-radius:15px;text-align:center;box-shadow:0 0 20px #000}
 input{padding:12px;font-size:20px;width:220px;text-align:center;border:none;border-radius:5px;margin:10px 0}
-button{padding:12px 30px;font-size:16
+button{padding:12px 30px;font-size:16px;border:none;border-radius:5px;background:#4CAF50;color:white;cursor:pointer}
+</style>
+</head>
+<body>
+<div id="lock">
+<h2>🔒 Enter PIN</h2>
+<input type="password" id="pin" placeholder="****" maxlength="4">
+<br>
+<button onclick="check()">OK</button>
+<p id="msg" style="color:red;margin-top:10px"></p>
+</div>
+<script>
+function check(){
+if(document.getElementById('pin').value=='1234'){
+document.body.innerHTML="<div style='text-align:center'><h1>Welcome! ❤️</h1><p>Site Unlocked</p></div>"
+}else{document.getElementById('msg').innerText="Wrong PIN. Try 1234"}
+}
+</script>
+</body>
+</html>
